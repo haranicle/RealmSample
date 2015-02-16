@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F68B898F1A91E30000DB8ED9 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FCBB0A1A91D09000F3756D /* Task.swift */; };
+		F68B89901A91E30600DB8ED9 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FCBB0C1A91D56D00F3756D /* Group.swift */; };
+		F68B89941A91EB6800DB8ED9 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68B89931A91EB6800DB8ED9 /* Realm.framework */; };
 		F6FCBAE61A91C89B00F3756D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FCBAE51A91C89B00F3756D /* AppDelegate.swift */; };
 		F6FCBAE81A91C89B00F3756D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FCBAE71A91C89B00F3756D /* ViewController.swift */; };
 		F6FCBAEB1A91C89B00F3756D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6FCBAE91A91C89B00F3756D /* Main.storyboard */; };
 		F6FCBAED1A91C89B00F3756D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6FCBAEC1A91C89B00F3756D /* Images.xcassets */; };
 		F6FCBAF01A91C89B00F3756D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6FCBAEE1A91C89B00F3756D /* LaunchScreen.xib */; };
-		F6FCBAFC1A91C89B00F3756D /* RealmSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FCBAFB1A91C89B00F3756D /* RealmSampleTests.swift */; };
 		F6FCBB061A91CADD00F3756D /* RLMSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FCBB051A91CADC00F3756D /* RLMSupport.swift */; };
 		F6FCBB081A91CD4D00F3756D /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6FCBB071A91CD4D00F3756D /* Realm.framework */; };
 		F6FCBB0B1A91D09000F3756D /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FCBB0A1A91D09000F3756D /* Task.swift */; };
@@ -30,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F68B89931A91EB6800DB8ED9 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = ../../../XcodeWorkSpace/RealmSample/Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		F6FCBAE01A91C89B00F3756D /* RealmSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6FCBAE41A91C89B00F3756D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6FCBAE51A91C89B00F3756D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,7 +42,6 @@
 		F6FCBAEF1A91C89B00F3756D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F6FCBAF51A91C89B00F3756D /* RealmSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RealmSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6FCBAFA1A91C89B00F3756D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F6FCBAFB1A91C89B00F3756D /* RealmSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmSampleTests.swift; sourceTree = "<group>"; };
 		F6FCBB051A91CADC00F3756D /* RLMSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLMSupport.swift; sourceTree = "<group>"; };
 		F6FCBB071A91CD4D00F3756D /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = ../../../XcodeWorkSpace/RealmSample/Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		F6FCBB0A1A91D09000F3756D /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F68B89941A91EB6800DB8ED9 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +113,7 @@
 		F6FCBAF81A91C89B00F3756D /* RealmSampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				F6FCBAFB1A91C89B00F3756D /* RealmSampleTests.swift */,
+				F68B89931A91EB6800DB8ED9 /* Realm.framework */,
 				F6FCBAF91A91C89B00F3756D /* Supporting Files */,
 			);
 			path = RealmSampleTests;
@@ -245,7 +248,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6FCBAFC1A91C89B00F3756D /* RealmSampleTests.swift in Sources */,
+				F68B898F1A91E30000DB8ED9 /* Task.swift in Sources */,
+				F68B89901A91E30600DB8ED9 /* Group.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +397,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					/Users/mter/Documents/XcodeWorkSpace/RealmSample/Carthage/Build/iOS,
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -412,6 +417,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					/Users/mter/Documents/XcodeWorkSpace/RealmSample/Carthage/Build/iOS,
 				);
 				INFOPLIST_FILE = RealmSampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

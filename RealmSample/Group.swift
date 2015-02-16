@@ -12,6 +12,9 @@ import Realm
 *  タスクのグループを表すクラス
 */
 class Group: RLMObject {
+    /// ID
+    dynamic var identifier = 0
+    
     /// タイトル
     dynamic var title = ""
 }
