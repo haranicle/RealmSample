@@ -12,16 +12,9 @@ import Realm
 *  タスクを表すクラス。
 */
 class Task: RLMObject {
-    /// ID
-    dynamic var identifier = 0
-    
     /// タイトル
     dynamic var title = ""
     
     /// 完了しているか
     dynamic var isDone = false
-    
-    /// 所属しているグループ/// ID
-    dynamic var dentifier = 0
-    dynamic var group:Group?
 }

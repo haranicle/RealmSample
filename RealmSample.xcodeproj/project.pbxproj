@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F68B898F1A91E30000DB8ED9 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FCBB0A1A91D09000F3756D /* Task.swift */; };
-		F68B89901A91E30600DB8ED9 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FCBB0C1A91D56D00F3756D /* Group.swift */; };
 		F68B89941A91EB6800DB8ED9 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68B89931A91EB6800DB8ED9 /* Realm.framework */; };
 		F6FCBAE61A91C89B00F3756D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FCBAE51A91C89B00F3756D /* AppDelegate.swift */; };
 		F6FCBAE81A91C89B00F3756D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FCBAE71A91C89B00F3756D /* ViewController.swift */; };
@@ -18,7 +17,6 @@
 		F6FCBB061A91CADD00F3756D /* RLMSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FCBB051A91CADC00F3756D /* RLMSupport.swift */; };
 		F6FCBB081A91CD4D00F3756D /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6FCBB071A91CD4D00F3756D /* Realm.framework */; };
 		F6FCBB0B1A91D09000F3756D /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FCBB0A1A91D09000F3756D /* Task.swift */; };
-		F6FCBB0D1A91D56D00F3756D /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FCBB0C1A91D56D00F3756D /* Group.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +43,6 @@
 		F6FCBB051A91CADC00F3756D /* RLMSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLMSupport.swift; sourceTree = "<group>"; };
 		F6FCBB071A91CD4D00F3756D /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = ../../../XcodeWorkSpace/RealmSample/Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		F6FCBB0A1A91D09000F3756D /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		F6FCBB0C1A91D56D00F3756D /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				F6FCBB0A1A91D09000F3756D /* Task.swift */,
-				F6FCBB0C1A91D56D00F3756D /* Group.swift */,
 				F6FCBAE51A91C89B00F3756D /* AppDelegate.swift */,
 				F6FCBAE71A91C89B00F3756D /* ViewController.swift */,
 				F6FCBAE91A91C89B00F3756D /* Main.storyboard */,
@@ -239,7 +235,6 @@
 				F6FCBB0B1A91D09000F3756D /* Task.swift in Sources */,
 				F6FCBAE81A91C89B00F3756D /* ViewController.swift in Sources */,
 				F6FCBB061A91CADD00F3756D /* RLMSupport.swift in Sources */,
-				F6FCBB0D1A91D56D00F3756D /* Group.swift in Sources */,
 				F6FCBAE61A91C89B00F3756D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,7 +244,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F68B898F1A91E30000DB8ED9 /* Task.swift in Sources */,
-				F68B89901A91E30600DB8ED9 /* Group.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
