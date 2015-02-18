@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--タスクリスト-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RealmSample" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Muc-zX-RZY" detailTextLabel="LPn-Pa-lAV" style="IBUITableViewCellStyleValue1" id="SAC-L8-Ad8">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="Muc-zX-RZY" detailTextLabel="LPn-Pa-lAV" style="IBUITableViewCellStyleValue1" id="SAC-L8-Ad8">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SAC-L8-Ad8" id="gQR-8q-VwO">
@@ -44,8 +44,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="87P-b8-Pbq"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Zl7-os-hvF"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="UB5-D5-zYz"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="yOG-a8-uaU"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -57,7 +57,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="VsV-5I-Mk2" secondAttribute="trailing" constant="-16" id="ntv-Lx-8RY"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="zmb-Zz-x9M"/>
+                    <navigationItem key="navigationItem" title="タスクリスト" id="zmb-Zz-x9M"/>
                     <connections>
                         <outlet property="tableView" destination="VsV-5I-Mk2" id="nii-dj-RaL"/>
                     </connections>
