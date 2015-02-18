@@ -17,4 +17,16 @@ class Task: RLMObject {
     
     /// 完了しているか
     dynamic var isDone = false
+    
+    /// 保存したDate
+    dynamic var savedDate = NSDate()
+    
+    
+    /// isDoneを文字列で表現する
+    func isDoneAsString() -> String {
+        if isDone {
+            return "👍"
+        }
+        return "✋"
+    }
 }

@@ -57,7 +57,13 @@
                             <constraint firstAttribute="trailingMargin" secondItem="VsV-5I-Mk2" secondAttribute="trailing" constant="-16" id="ntv-Lx-8RY"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="タスクリスト" id="zmb-Zz-x9M"/>
+                    <navigationItem key="navigationItem" title="タスクリスト" id="zmb-Zz-x9M">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="9UD-7a-xA0">
+                            <connections>
+                                <segue destination="ZrX-ap-WJM" kind="presentation" id="xSp-Gf-kLb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="VsV-5I-Mk2" id="nii-dj-RaL"/>
                     </connections>
@@ -83,6 +89,87 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A1O-00-LdL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3" y="-407"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wUV-Pp-PkL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZrX-ap-WJM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="02M-A8-iR3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gyC-kn-Rim" kind="relationship" relationship="rootViewController" id="3yY-Gr-IJ2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3si-0r-P0Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1483" y="-407"/>
+        </scene>
+        <!--新しいタスク-->
+        <scene sceneID="YXP-jA-rh4">
+            <objects>
+                <viewController id="gyC-kn-Rim" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hUR-hb-wzM"/>
+                        <viewControllerLayoutGuide type="bottom" id="bH8-Ys-E91"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Cx-ch-6FY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cHC-Rr-16J">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <sections>
+                                    <tableViewSection id="GsR-jf-hi7">
+                                        <cells>
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="PvK-bh-wQR">
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PvK-bh-wQR" id="8AB-YV-wGg">
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトル" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ci9-pw-1Jj">
+                                                            <rect key="frame" x="8" y="11" width="68" height="20"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K81-5Q-HJj">
+                                                            <rect key="frame" x="84" y="7" width="508" height="29"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="K81-5Q-HJj" firstAttribute="top" secondItem="8AB-YV-wGg" secondAttribute="topMargin" constant="-1" id="HEg-bd-0uY"/>
+                                                        <constraint firstItem="Ci9-pw-1Jj" firstAttribute="top" secondItem="8AB-YV-wGg" secondAttribute="topMargin" constant="3" id="K3g-DQ-BFT"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="Ci9-pw-1Jj" secondAttribute="bottom" constant="4" id="KO7-UH-4U8"/>
+                                                        <constraint firstItem="K81-5Q-HJj" firstAttribute="leading" secondItem="Ci9-pw-1Jj" secondAttribute="trailing" constant="8" id="Y1n-bS-iax"/>
+                                                        <constraint firstItem="K81-5Q-HJj" firstAttribute="leading" secondItem="Ci9-pw-1Jj" secondAttribute="trailing" constant="8" id="cTL-by-DOs"/>
+                                                        <constraint firstItem="K81-5Q-HJj" firstAttribute="trailing" secondItem="8AB-YV-wGg" secondAttribute="trailingMargin" id="dmy-pT-w77"/>
+                                                        <constraint firstItem="Ci9-pw-1Jj" firstAttribute="leading" secondItem="8AB-YV-wGg" secondAttribute="leadingMargin" id="joc-M6-qXI"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="K81-5Q-HJj" secondAttribute="bottom" constant="-1" id="ybS-zw-Dtj"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </cells>
+                                    </tableViewSection>
+                                </sections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="新しいタスク" id="UHo-5K-ROv">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Zmb-gG-TAg"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="r03-5L-0yU"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wp7-H2-nlV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2139" y="-407"/>
         </scene>
     </scenes>
 </document>
