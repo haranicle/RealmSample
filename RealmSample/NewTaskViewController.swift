@@ -7,9 +7,16 @@
 //
 
 import UIKit
+import Realm
 
-class NewTaskViewController: UIViewController {
-
+/**
+*  新しいタスクを追加する画面のViewController。
+*/
+class NewTaskViewController: UITableViewController {
+    
+    /// タイトルを入力するテキストフィールド
+    @IBOutlet weak var titleTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,15 +28,34 @@ class NewTaskViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
+    // MARK: - ボタン押下時の処理
+    
+    /**
+    キャンセルボタン押下時の処理。
+    
+    :param: sender センダー
     */
+    @IBAction func onCancelPushed(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func onSavePushed(sender: AnyObject) {
+        var task = Task()
+    }
+    
+    func saveNewTask(task:Task) {
+        var task = Task()
+        task.title = titleTextField.text
+        
+        let realm = RLMRealm.defaultRealm()
+        realm.beginWriteTransaction()
+        realm.addObject(task)
+        realm.commitWriteTransaction()
+    }
+    
+//    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        tableView.deselectRowAtIndexPath(indexPath, animated: false)
+//    }
+
 
 }
