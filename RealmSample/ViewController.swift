@@ -13,6 +13,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     /// テーブルビュー
     @IBOutlet weak var tableView: UITableView!
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
     /// タスク一覧のRLMResults
     var tasks = Task.allObjects().sortedResultsUsingProperty("savedDate", ascending: false)
     
@@ -28,11 +33,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     // MARK: - UITableViewDataSource
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -40,14 +40,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
         
-        let task = tasks[UInt(indexPath.row)] as Task
+        let task = tasks[UInt(indexPath.row)]as! Task
         cell.textLabel?.text = task.title
         cell.detailTextLabel?.text = task.isDoneAsString()
         
         return cell
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let task = tasks[UInt(indexPath.row)]as! Task
+        task.updateIsDone(!task.isDone)
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: false)
+    }
+    
 
 }
 

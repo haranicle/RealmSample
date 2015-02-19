@@ -41,21 +41,17 @@ class NewTaskViewController: UITableViewController {
     
     @IBAction func onSavePushed(sender: AnyObject) {
         var task = Task()
-    }
-    
-    func saveNewTask(task:Task) {
-        var task = Task()
         task.title = titleTextField.text
+        task.save()
         
-        let realm = RLMRealm.defaultRealm()
-        realm.beginWriteTransaction()
-        realm.addObject(task)
-        realm.commitWriteTransaction()
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-//    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        tableView.deselectRowAtIndexPath(indexPath, animated: false)
-//    }
+    // MARK: - UITableViewDelegate
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: false)
+    }
 
 
 }

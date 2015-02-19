@@ -12,6 +12,9 @@ import Realm
 *  タスクを表すクラス。
 */
 class Task: RLMObject {
+    /// UUID
+    dynamic var uuid = NSUUID().UUIDString
+    
     /// タイトル
     dynamic var title = ""
     
@@ -21,6 +24,10 @@ class Task: RLMObject {
     /// 保存したDate
     dynamic var savedDate = NSDate()
     
+    override class func primaryKey() -> String {
+        return "uuid"
+    }
+    
     
     /// isDoneを文字列で表現する
     func isDoneAsString() -> String {
@@ -29,4 +36,28 @@ class Task: RLMObject {
         }
         return "✋"
     }
+    
+    // MARK: - DB関連
+    
+    /**
+    タスクをDBに記録する。
+    */
+    func save() {
+        let realm = RLMRealm.defaultRealm()
+        realm.beginWriteTransaction()
+        realm.addObject(self)
+        realm.commitWriteTransaction()
+    }
+    
+    /**
+    isDoneを変更してDBを更新する。
+    */
+    func updateIsDone(isDone:Bool) {
+        let realm = RLMRealm.defaultRealm()
+        realm.beginWriteTransaction()
+        self.isDone = isDone
+        realm.commitWriteTransaction()
+    }
+    
+    
 }

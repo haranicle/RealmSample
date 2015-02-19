@@ -10,6 +10,7 @@
 		F64EB2161A943266004361BD /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6FCBB071A91CD4D00F3756D /* Realm.framework */; };
 		F64EB2171A943266004361BD /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6FCBB071A91CD4D00F3756D /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F64EB21B1A944F05004361BD /* NewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64EB21A1A944F05004361BD /* NewTaskViewController.swift */; };
+		F67E650A1A95A90F00DCD706 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F67E65091A95A90F00DCD706 /* Storyboard.storyboard */; };
 		F68B898F1A91E30000DB8ED9 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FCBB0A1A91D09000F3756D /* Task.swift */; };
 		F68B89941A91EB6800DB8ED9 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68B89931A91EB6800DB8ED9 /* Realm.framework */; };
 		F6FCBAE61A91C89B00F3756D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FCBAE51A91C89B00F3756D /* AppDelegate.swift */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		F64EB21A1A944F05004361BD /* NewTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTaskViewController.swift; sourceTree = "<group>"; };
+		F67E65091A95A90F00DCD706 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		F68B89931A91EB6800DB8ED9 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = ../../../XcodeWorkSpace/RealmSample/Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		F6FCBAE01A91C89B00F3756D /* RealmSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6FCBAE41A91C89B00F3756D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				F6FCBAEE1A91C89B00F3756D /* LaunchScreen.xib */,
 				F6FCBB091A91CD6900F3756D /* Realm */,
 				F6FCBAE31A91C89B00F3756D /* Supporting Files */,
+				F67E65091A95A90F00DCD706 /* Storyboard.storyboard */,
 			);
 			path = RealmSample;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6FCBAEB1A91C89B00F3756D /* Main.storyboard in Resources */,
+				F67E650A1A95A90F00DCD706 /* Storyboard.storyboard in Resources */,
 				F6FCBAF01A91C89B00F3756D /* LaunchScreen.xib in Resources */,
 				F6FCBAED1A91C89B00F3756D /* Images.xcassets in Resources */,
 			);
