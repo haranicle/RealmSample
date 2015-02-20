@@ -9,9 +9,10 @@ import UIKit
 import Realm
 
 /**
-*  新しいタスクを追加する画面のViewController。
+新しいタスクを追加する画面のViewController。
 */
 class NewTaskViewController: UITableViewController {
+    
     
     /// タイトルを入力するテキストフィールド
     @IBOutlet weak var titleTextField: UITextField!
@@ -27,10 +28,16 @@ class NewTaskViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - UITableViewDelegate
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: false)
+    }
+    
     // MARK: - ボタン押下時の処理
     
     /**
-    キャンセルボタン押下時の処理。
+    Cancelボタン押下時の処理。
     
     :param: sender センダー
     */
@@ -38,6 +45,11 @@ class NewTaskViewController: UITableViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    /**
+    Saveボタン押下時の処理。
+    
+    :param: sender センダー
+    */
     @IBAction func onSavePushed(sender: AnyObject) {
         var task = Task()
         task.title = titleTextField.text
@@ -45,12 +57,5 @@ class NewTaskViewController: UITableViewController {
         
         self.dismissViewControllerAnimated(true, completion: nil)
     }
-    
-    // MARK: - UITableViewDelegate
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: false)
-    }
-
 
 }

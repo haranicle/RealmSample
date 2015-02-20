@@ -9,7 +9,7 @@ import UIKit
 import Realm
 
 /**
-*  タスクを表すクラス。
+タスクを表すクラス。
 */
 class Task: RLMObject {
     /// UUID

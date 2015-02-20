@@ -8,6 +8,9 @@
 import UIKit
 import Realm
 
+/**
+タスクの一覧を表示する画面のViewController。
+*/
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     /// テーブルビュー
@@ -24,6 +27,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     /// タスク一覧が変更された時の処理
     var tasksNotificationToken:RLMNotificationToken?
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,6 +52,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         return cell
     }
+    
+    // MARK: - UITableViewDelegate
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let task = tasks[UInt(indexPath.row)]as! Task
