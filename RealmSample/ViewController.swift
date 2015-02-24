@@ -31,6 +31,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        println(RLMRealm.defaultRealmPath())
+        
         // タスク一覧が変更された時の処理を登録する。
         tasksNotificationToken = RLMRealm.defaultRealm().addNotificationBlock{ note, realm in
             self.tableView.reloadData()
@@ -44,9 +46,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
         
-        let task = tasks[UInt(indexPath.row)]as! Task
+        let task = tasks[UInt(indexPath.row)]as Task
         cell.textLabel?.text = task.title
         cell.detailTextLabel?.text = task.isDoneAsString()
         
@@ -56,7 +58,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // MARK: - UITableViewDelegate
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let task = tasks[UInt(indexPath.row)]as! Task
+        let task = tasks[UInt(indexPath.row)]as Task
         task.updateIsDone(!task.isDone)
         
         tableView.deselectRowAtIndexPath(indexPath, animated: false)

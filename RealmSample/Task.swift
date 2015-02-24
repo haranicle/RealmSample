@@ -32,9 +32,9 @@ class Task: RLMObject {
     /// isDoneを文字列で表現する
     func isDoneAsString() -> String {
         if isDone {
-            return "👍"
+            return "Done🍣"
         }
-        return "✋"
+        return "Doing🚀"
     }
     
     // MARK: - DB関連
